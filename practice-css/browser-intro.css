@@ -3,25 +3,43 @@ p {
 }
 
 p.info {
-	font-size: 10pt;
+	font-size: small;
+	background-color: #dfdfdf;
+	padding: 5px;
 }
 
 h1 {
 	background-color: #7f7fcf;
+	color:white;
+	text-shadow:2px 2px navy;
+}
+div#zentai {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	width: 1024px;
+}
+div#zentai > div {
+    margin: 0; 
+    padding: 5px; 
+    height: 200px; 
+    background-color: #ffefaf;
 }
 
 h2 {
 	border: solid 1px black;
 	margin: 5px;
+	font-family:cursive;
+	color:#3f3faf;
+	background:linear-gradient(white,#ffefaf);
 }
-
-div#zentai {
-	display: flex;
-	flex-direction: row;
-	width: 1024px;
+img{
+	float: right;
 }
-
-div#zentai > div {
-	margin-left: 5px;
-	background-color: #ffefaf;
+ul{
+	padding:20px;
+}
+a:hover {
+	color: orange;
+	text-decoration: none;
 }
