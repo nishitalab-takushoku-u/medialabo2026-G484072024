@@ -1,6 +1,11 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
+  console.log("都市: " + data.name);
+  
+  console.log("天気: " + data.weather[0].description);
+  console.log("気温: " + (data.main.temp - 273.15).toFixed(1) + " °C");
+  console.log("体感温度: " + (data.main.feels_like - 273.15).toFixed(1) + " °C");
 
 }
 
@@ -37,8 +42,8 @@ function finish() {
 ////////////////////////////////////////
 // 以下はグルメのデータサンプル
 // 注意: 第5回までは以下を変更しないこと！
-// 注意2: 課題6-1 で以下をすべて削除すること
-let data = {
+// 注意2: 課題6-1 で以下をすべて削除するこ
+window.data = {
   "coord": {
     "lon": 116.3972,
     "lat": 39.9075
