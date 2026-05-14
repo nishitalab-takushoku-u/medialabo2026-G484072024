@@ -15,13 +15,18 @@ function printDom(data) {
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
-
+document.querySelector('#btn')
+  .addEventListener('click', sendRequest);
 
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
+  let key =
+  document.querySelector('#key').value;
 
+
+console.log('検索キー: ' + key);
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
