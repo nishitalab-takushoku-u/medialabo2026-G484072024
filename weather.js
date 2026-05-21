@@ -11,7 +11,47 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let oldResult = document.querySelector('#result');
+  if (oldResult) {
+      oldResult.remove();
+  }
 
+  
+  let divResult = document.createElement('div');
+  divResult.setAttribute('id', 'result');
+
+  
+  let body = document.querySelector('body');
+  if (body) {
+      body.insertAdjacentElement('beforeend', divResult);
+  }
+
+  
+  let ul = document.createElement('ul');
+
+  
+  let liName = document.createElement('li');
+  liName.textContent = "都市: " + data.name;
+  ul.insertAdjacentElement('beforeend', liName);
+
+  
+  let liWeather = document.createElement('li');
+  liWeather.textContent = "天气: " + data.weather[0].description;
+  ul.insertAdjacentElement('beforeend', liWeather);
+
+  
+  let liTemp = document.createElement('li');
+  
+  liTemp.textContent = "気温: " + data.main.temp.toFixed(1) + " °C";
+  ul.insertAdjacentElement('beforeend', liTemp);
+
+  
+  let liFeels = document.createElement('li');
+  liFeels.textContent = "体感温度: " + data.main.feels_like.toFixed(1) + " °C";
+  ul.insertAdjacentElement('beforeend', liFeels);
+
+  
+  divResult.insertAdjacentElement('beforeend', ul);
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述

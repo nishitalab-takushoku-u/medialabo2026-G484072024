@@ -26,3 +26,5 @@ for (let room of campus.buildingD) {
 for (let dept of gakka) {
     console.log(dept.name);
 }
+
+
